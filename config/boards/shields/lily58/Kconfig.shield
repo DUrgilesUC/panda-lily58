@@ -1,8 +1,10 @@
 # Copyright (c) 2020 
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: MIT 2
 
 config SHIELD_LILY58_LEFT
 	def_bool $(shields_list_contains,lily58_left)
 
 config SHIELD_LILY58_RIGHT
 	def_bool $(shields_list_contains,lily58_right)
+
+
