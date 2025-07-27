@@ -84,7 +84,7 @@
             ;
     };
  
-    corne_position_map {
+    LILY58_position_map {
         compatible = "zmk,physical-layout-position-map";
 
         complete;
