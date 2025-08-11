@@ -23,7 +23,7 @@
         zmk,battery = &vbatt;
     };
 
-    encoder0: encoder_0 {
+    encoder1: encoder_1 {
         compatible = "alps,ec11";
         // "label" está deprecado en Zephyr 3.5; puedes quitarlo
         // label = "Left Encoder";
