@@ -49,7 +49,7 @@
         a-gpios = <&pro_micro 20 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 21 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         // Usa "resolution" en Zephyr/ZMK recientes. Si tu build espera "steps", cambia esta línea.
-        steps = <1>;
+        steps = <80>;
         status = "disabled";
     };
 
@@ -58,7 +58,7 @@
         compatible = "alps,ec11";
         a-gpios = <&pro_micro 20  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
         b-gpios = <&pro_micro 21  (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        steps = <1>;
+        steps = <80>;
         status = "disabled";
     };
 };
