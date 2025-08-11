@@ -23,13 +23,14 @@
         zmk,battery = &vbatt;
     };
 
-    encoder1: encoder_1 {
+    encoder0: encoder_0 {
         compatible = "alps,ec11";
-        label = "Right Encoder";
-        a-gpios = <&pro_micro 29 GPIO_ACTIVE_LOW | GPIO_PULL_UP>;
-        b-gpios = <&pro_micro 31 GPIO_ACTIVE_LOW | GPIO_PULL_UP>;
-        steps = <4>;
+        // "label" está deprecado en Zephyr 3.5; puedes quitarlo
+        // label = "Left Encoder";
+        a-gpios = <&pro_micro 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        resolution = <4>;           // antes "steps"
         status = "okay";
-        sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
     };
 };
