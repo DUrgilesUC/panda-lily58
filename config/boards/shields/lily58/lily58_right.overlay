@@ -19,7 +19,7 @@
     status = "okay";
 };
 
-&chosen {
+chosen {
     zmk,battery = &vbatt;
 };
 
