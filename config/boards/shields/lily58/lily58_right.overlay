@@ -1,34 +1,35 @@
 #include "lily58.dtsi"
 
 &default_transform {
-	col-offset = <6>;
+    col-offset = <6>;
 };
 
 &kscan0 {
-    col-gpios
-        = <&pro_micro 10 GPIO_ACTIVE_HIGH>,
-          <&pro_micro 16 GPIO_ACTIVE_HIGH>,
-          <&pro_micro 14 GPIO_ACTIVE_HIGH>,
-          <&pro_micro 15 GPIO_ACTIVE_HIGH>,
-          <&pro_micro 18 GPIO_ACTIVE_HIGH>,
-          <&pro_micro 19 GPIO_ACTIVE_HIGH>;
+    col-gpios = <&pro_micro 10 GPIO_ACTIVE_HIGH>,
+                <&pro_micro 16 GPIO_ACTIVE_HIGH>,
+                <&pro_micro 14 GPIO_ACTIVE_HIGH>,
+                <&pro_micro 15 GPIO_ACTIVE_HIGH>,
+                <&pro_micro 18 GPIO_ACTIVE_HIGH>,
+                <&pro_micro 19 GPIO_ACTIVE_HIGH>;
 };
 
-vbatt {
-    compatible = "zmk,battery-nrf-vddh";
-    status = "okay";
-};
+ / {
+    vbatt: vbatt {
+        compatible = "zmk,battery-nrf-vddh";
+        status = "okay";
+    };
 
-chosen {
-    zmk,battery = &vbatt;
-};
+    chosen {
+        zmk,battery = &vbatt;
+    };
 
-encoder1: encoder_1 {
-    compatible = "alps,ec11";
-    label = "Right Encoder";
-    a-gpios = <&pro_micro 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-    b-gpios = <&pro_micro 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-    steps = <4>;
-    status = "okay";
-    sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+    encoder1: encoder_1 {
+        compatible = "alps,ec11";
+        label = "Right Encoder";
+        a-gpios = <&pro_micro 29 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro 31 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        steps = <4>;
+        status = "okay";
+        sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
+    };
 };
