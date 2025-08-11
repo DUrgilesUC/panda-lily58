@@ -18,7 +18,6 @@
     chosen {
         zmk,battery = &vbatt;
     };
-
     encoder0: encoder_0 {
         compatible = "alps,ec11";
         label = "Left Encoder";
