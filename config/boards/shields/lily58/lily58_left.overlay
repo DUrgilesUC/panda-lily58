@@ -10,7 +10,7 @@
           <&pro_micro 10 GPIO_ACTIVE_HIGH>;
 };
 
-&vbatt {
+vbatt {
     compatible = "zmk,battery-nrf-vddh";
     status = "okay";
 };
