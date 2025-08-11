@@ -15,7 +15,7 @@
     sensors: sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&left_encoder &right_encoder>;  /* Orden = orden de bindings abajo */
-        triggers-per-rotation = <100>;              /* Ajusta a tu gusto */
+        triggers-per-rotation = <40>;              /* Ajusta a tu gusto */
     };
 
     keymap {
@@ -37,7 +37,7 @@
             >;
 
             /* Orden: first = left_encoder, second = right_encoder */
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN  &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN>;
         };
 
         lower_layer {
