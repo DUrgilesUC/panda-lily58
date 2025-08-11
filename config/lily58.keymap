@@ -73,7 +73,10 @@
                                     &trans  &trans  &trans    &trans  &trans    &trans      &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_KBD_BRIGHTNESS_DOWN C_KBD_BRIGHTNESS_UP  &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <
+            &inc_dec_kp C_VOL_DN C_VOL_UP
+            &inc_dec_kp C_BRIGHTNESS_DEC C_BRIGHTNESS_INC
+            >;
         };
     };
 };
