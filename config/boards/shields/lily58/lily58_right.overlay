@@ -26,8 +26,8 @@
     encoder1: encoder_1 {
         compatible = "alps,ec11";
         label = "Right Encoder";
-        a-gpios = <&pro_micro 29 (GPIO_ACTIVE_LOW + GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 31 (GPIO_ACTIVE_LOW + GPIO_PULL_UP)>;
+        a-gpios = <&pro_micro 29 GPIO_ACTIVE_LOW + GPIO_PULL_UP>;
+        b-gpios = <&pro_micro 31 GPIO_ACTIVE_LOW + GPIO_PULL_UP>;
         steps = <4>;
         status = "okay";
         sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;
