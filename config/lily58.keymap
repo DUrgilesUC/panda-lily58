@@ -37,7 +37,10 @@
             >;
 
             /* Orden: first = left_encoder, second = right_encoder */
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_BRIGHTNESS_DOWN C_BRIGHTNESS_UP>;
+            sensor-bindings = <
+                &inc_dec_kp &kp C_VOL_DN &kp C_VOL_UP
+                &inc_dec_kp &kp C_BRIGHTNESS_DOWN &kp C_BRIGHTNESS_UP
+            >;
         };
 
         lower_layer {
