@@ -83,19 +83,19 @@
             sensor-bindings = <&inc_dec_kp LS(WHEEL_UP) LS(WHEEL_DOWN) &inc_dec_kp LC(PLUS) LC(MINUS)>;
         };
 
-        mouse_layer {
-            // F y J (o su posición) son clic izquierdo y derecho
+       mouse_layer {
+            // Fila 3: J y L como clics (LCLK y RCLK)
             bindings = <
-                &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans    &trans  &trans    &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans    &trans  &trans    &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &mkp LCLK &trans  &mkp RCLK &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans    &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans    &trans  &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &mkp LCLK &trans  &mkp RCLK &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans    &trans  &trans
                         &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans
             >;
 
-            // Cambiamos la sintaxis para que sea compatible con el compilador
-            // Esto moverá el mouse en pasos fijos por cada 'clic' del encoder
-            sensor-bindings = <&inc_dec_kp MMV_R MMV_L &inc_dec_kp MMV_U MMV_D>;
+            // Usamos macros de movimiento que ZMK acepta sin parámetros extra
+            // Encoder Izquierdo: Movimiento Horizontal | Encoder Derecho: Movimiento Vertical
+            sensor-bindings = <&inc_dec_kp M_WHEEL_UP M_WHEEL_DOWN &inc_dec_kp M_WHEEL_LEFT M_WHEEL_RIGHT>;
         };
     };
 };
