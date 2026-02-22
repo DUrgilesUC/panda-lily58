@@ -20,7 +20,6 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
       import: app/west.yml
     - name: hammerbeam-slideshow
       remote: gpeye
