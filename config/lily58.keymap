@@ -84,15 +84,18 @@
         };
 
         mouse_layer {
+            // F y J (o su posición) son clic izquierdo y derecho
             bindings = <
-                &trans &trans &trans &trans &trans &trans                         &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans                         &trans &trans &trans &trans &trans &trans
-                &trans &trans &trans &trans &trans &trans                         &trans &mkp LCLK &trans &mkp RCLK &trans &trans
-                &trans &trans &trans &trans &trans &trans &trans          &trans &trans &trans &trans &trans &trans &trans
-                                     &trans &trans &trans &trans          &trans &trans &trans &trans &trans
+                &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans    &trans  &trans    &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans    &trans  &trans    &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &mkp LCLK &trans  &mkp RCLK &trans  &trans
+                &trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans    &trans  &trans
+                        &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans
             >;
-            // Formato correcto para movimiento de mouse con encoders:
-            sensor-bindings = <&inc_dec_kp MOVE_X MOVE_Y>; 
+
+            // Cambiamos la sintaxis para que sea compatible con el compilador
+            // Esto moverá el mouse en pasos fijos por cada 'clic' del encoder
+            sensor-bindings = <&inc_dec_kp MMV_R MMV_L &inc_dec_kp MMV_U MMV_D>;
         };
     };
 };
