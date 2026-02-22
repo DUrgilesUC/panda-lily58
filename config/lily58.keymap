@@ -9,13 +9,22 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/rgb.h>
+#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/mouse.h> 
 
 / {
     behaviors {
+        // Movimiento del cursor
         mmv {
             acceleration-delay = <0>;
             time-to-max-speed-ms = <300>;
+            delay = <0>;
+        };
+        // Scroll del mouse
+        msc {
+            acceleration-delay = <0>;
+            time-to-max-speed-ms = <300>;
+            delay = <0>;
         };
     };
 
@@ -84,18 +93,16 @@
         };
 
        mouse_layer {
-            // Fila 3: J y L como clics (LCLK y RCLK)
+            // Capa 3: Control de Mouse con Encoders
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans    &trans  &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans    &trans  &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                          &trans  &mkp LCLK &trans  &mkp RCLK &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans    &trans  &trans
-                        &trans  &trans  &trans  &trans          &trans  &trans  &trans    &trans  &trans
+&trans &trans &trans &trans &trans &trans                         &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans                         &trans &trans &trans &trans &trans &trans
+&trans &trans &trans &trans &trans &trans                         &trans &mkp LCLK &trans &mkp RCLK &trans &trans
+&trans &trans &trans &trans &trans &trans &trans          &trans &trans &trans &trans &trans &trans &trans
+                     &trans &trans &trans &trans          &trans &trans &trans &trans &trans
             >;
-
-            // Usamos macros de movimiento que ZMK acepta sin parámetros extra
-            // Encoder Izquierdo: Movimiento Horizontal | Encoder Derecho: Movimiento Vertical
-            sensor-bindings = <&inc_dec_kp M_WHEEL_UP M_WHEEL_DOWN &inc_dec_kp M_WHEEL_LEFT M_WHEEL_RIGHT>;
+            // Izquierdo: Eje X (Izquierda/Derecha) | Derecho: Eje Y (Arriba/Abajo)
+            sensor-bindings = <&inc_dec_kp MOVE_X MOVE_Y>;
         };
     };
 };
