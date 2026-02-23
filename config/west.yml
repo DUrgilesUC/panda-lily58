@@ -11,6 +11,8 @@ manifest:
 
     - name: m165437
       url-base: https://github.com/M165437
+
+
     - name: s6t
       url-base: https://github.com/s6t
     - name: infely
@@ -30,6 +32,7 @@ manifest:
     - name: nice-view-gem
       remote: m165437
       revision: main
+      
     - name: zmk-shield-nice-view-cats
       remote: s6t
       revision: main
