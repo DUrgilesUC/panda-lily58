@@ -14,12 +14,9 @@
 
 / {
     behaviors {
-        mmv {
-            acceleration-delay = <0>;
-            time-to-max-speed-ms = <300>;
-            delay = <0>;
-        };
-        msc {
+        hw_mmv: hw_mmv {
+            compatible = "zmk,behavior-mouse-move";
+            #binding-cells = <1>;
             acceleration-delay = <0>;
             time-to-max-speed-ms = <300>;
             delay = <0>;
@@ -98,8 +95,7 @@
 &trans &trans &trans &trans &trans &trans &trans          &trans &trans &trans &trans &trans &trans &trans
                      &trans &trans &trans &trans          &trans &trans &trans &trans &trans
             >;
-            // CAMBIO CLAVE PARA ZMK 0.3:
-            // Usamos MOVE_Y y MOVE_X como "teclas" dentro de inc_dec_kp
+            /* SOLUCIÓN AL ERROR: Usamos el comportamiento de mouse move directo */
             sensor-bindings = <&inc_dec_kp MOVE_X MOVE_X &inc_dec_kp MOVE_Y MOVE_Y>;
         };
     };
