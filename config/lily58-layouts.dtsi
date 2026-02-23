@@ -73,14 +73,14 @@
             , <&key_physical_attrs 100 100  250  440    0    0    0> // 48
             , <&key_physical_attrs 100 100  350  440    0    0    0> // 49
             , <&key_physical_attrs 100 100  450  450    0    0    0> // 50
-            , <&key_physical_attrs 100 100  550  460  2600   0  460> // 51 (Rotada)
-            , <&key_physical_attrs 100 100  560  350    0    0    0> // 52 (Central)
+            , <&key_physical_attrs 100 100  550  460  2600   0  460> // 51
+            , <&key_physical_attrs 100 100  560  350    0    0    0> // 52
 
-            , <&key_physical_attrs 100 100  960  350    0    0    0> // 53 (Central)
-            , <&key_physical_attrs 100 100  970  460 -2600   0  460> // 54 (Rotada invertida)
-            , <&key_physical_attrs 100 100 1070  450    0    0    0> // 55
-            , <&key_physical_attrs 100 100 1170  440    0    0    0> // 56
-            , <&key_physical_attrs 100 100 1270  440    0    0    0> // 57
+            , <&key_physical_attrs 100 100  940  350    0    0    0> // 53
+            , <&key_physical_attrs 100 100  950  460 -2600   0  460> // 54 - Corregido sin paréntesis
+            , <&key_physical_attrs 100 100 1050  450    0    0    0> // 55
+            , <&key_physical_attrs 100 100 1150  440    0    0    0> // 56
+            , <&key_physical_attrs 100 100 1250  440    0    0    0> // 57
             ;
     };
 
