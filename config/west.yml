@@ -8,9 +8,7 @@ manifest:
 
     - name: gpeye
       url-base: https://github.com/GPeye
-      
-    - name: kevinpastor
-      url-base: https://github.com/kevinpastor
+
     - name: m165437
       url-base: https://github.com/M165437
     - name: s6t
@@ -25,14 +23,10 @@ manifest:
       remote: zmkfirmware
       import: app/west.yml
 
-
     - name: hammerbeam-slideshow
       remote: gpeye
       revision: main
-   
-    - name: nice-view-elemental
-      remote: kevinpastor
-      revision: main
+
     - name: nice-view-gem
       remote: m165437
       revision: main
