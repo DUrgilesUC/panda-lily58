@@ -9,15 +9,6 @@ manifest:
     - name: gpeye
       url-base: https://github.com/GPeye
 
-    - name: m165437
-      url-base: https://github.com/M165437
-
-
-    - name: s6t
-      url-base: https://github.com/s6t
-    - name: infely
-      url-base: https://github.com/infely
-
       #- name: mctechnology17
     #  url-base: https://github.com/mctechnology17
   projects:
@@ -27,17 +18,6 @@ manifest:
 
     - name: hammerbeam-slideshow
       remote: gpeye
-      revision: main
-
-    - name: nice-view-gem
-      remote: m165437
-      revision: main
-      
-    - name: zmk-shield-nice-view-cats
-      remote: s6t
-      revision: main
-    - name: nice-view-battery
-      remote: infely
       revision: main
 
       # - name: zmk-nice-oled
