@@ -2,9 +2,9 @@ file_format: "1"
 id: lily58
 name: LILY58
 type: shield
-url: https://github.com/Bastardkb/TBK-Mini
+url: https://github.com/kata0510/Lily58
 requires: [Nice!Nano]
-exposes: [i2c_oled]
+exposes: [nice_view_spi]
 features:
   - keys
   - display
