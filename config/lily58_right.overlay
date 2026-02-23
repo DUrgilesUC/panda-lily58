@@ -5,26 +5,26 @@
 };
 
 &kscan0 {
-    col-gpios = <&pro_micro 10 GPIO_ACTIVE_HIGH>,
-                <&pro_micro 16 GPIO_ACTIVE_HIGH>,
-                <&pro_micro 14 GPIO_ACTIVE_HIGH>,
-                <&pro_micro 15 GPIO_ACTIVE_HIGH>,
-                <&pro_micro 18 GPIO_ACTIVE_HIGH>,
-                <&pro_micro 19 GPIO_ACTIVE_HIGH>;
+    col-gpios
+        = <&pro_micro 10 GPIO_ACTIVE_HIGH> // Columna 6
+        , <&pro_micro 16 GPIO_ACTIVE_HIGH> // Columna 7
+        , <&pro_micro 14 GPIO_ACTIVE_HIGH> // Columna 8
+        , <&pro_micro 15 GPIO_ACTIVE_HIGH> // Columna 9
+        , <&pro_micro 18 GPIO_ACTIVE_HIGH> // Columna 10
+        , <&pro_micro 19 GPIO_ACTIVE_HIGH> // Columna 11
+        ;
 };
 
- / {
-    vbatt: vbatt {
-        compatible = "zmk,battery-nrf-vddh";
-        status = "okay";
-    };
+&right_encoder {
+    status = "okay";
+};
 
+/ {
     chosen {
         zmk,battery = &vbatt;
     };
-};
 
-/* Habilita el encoder del lado derecho definido en el .dtsi */
-&right_encoder {
-    status = "okay";
+    vbatt: vbatt {
+        compatible = "zmk,battery-nrf-vddh";
+    };
 };
