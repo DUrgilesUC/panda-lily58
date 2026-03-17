@@ -92,8 +92,8 @@
             bindings = <
 /* RAISE = navegación / edición / ventanas / pestañas */
                 &trans     &trans         &trans         &trans         &trans         &trans                         &trans         &trans         &trans          &trans          &trans           &trans
-                &trans     &kp LC(Z)      &kp LC(X)      &kp LC(C)      &kp LC(V)      &kp LC(Y)                      &kp HOME       &kp PG_DN      &kp UP          &kp PG_UP       &kp END          &kp INS
-                &trans     &kp LG(LEFT)   &kp LG(RIGHT)  &kp LC(LEFT)   &kp LC(RIGHT)  &kp LA(DOWN)                   &trans         &kp LEFT       &kp DOWN        &kp RIGHT       &trans           &trans
+                &trans     &kp LC(Z)      &kp LC(X)      &kp LC(C)      &kp LC(V)      &kp LC(Y)                      &kp HOME       &kp PG_DN       &trans         &kp PG_UP       &kp END          &kp INS
+                &trans     &kp LG(LEFT)   &kp LG(RIGHT)  &kp LC(LEFT)   &kp LC(RIGHT)  &kp LA(DOWN)                   &kp LEFT       &kp DOWN       &kp UP          &kp RIGHT       &trans           &trans
                 &trans     &kp LC(A)      &kp LC(F)      &kp LC(S)      &kp LC(P)      &kp LS(LA(DOWN)) &trans      &trans          &kp LG(LC(LEFT)) &kp LC(LS(TAB)) &kp LC(TAB)    &kp LG(LC(RIGHT)) &trans           &trans
                                         &trans         &trans         &trans         &trans          &trans         &trans          &trans         &trans
             >;
